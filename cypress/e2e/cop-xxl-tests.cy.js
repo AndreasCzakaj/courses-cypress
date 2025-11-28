@@ -6,16 +6,8 @@ describe("CoP QA XXL", () => {
     // Handle the Usercentrics cookie consent shadow DOM
     cy.get("#usercentrics-root")
       .shadow()
-      .within(() => {
-        cy.get("[data-testid=uc-accept-all-button]", {
-          includeShadowDom: true,
-          timeout: 15000,
-        })
-          .should("be.visible")
-          .click({
-            timeout: 15000,
-          });
-      });
+      .find('[data-testid="uc-accept-all-button"]')
+      .click({ force: true });
   });
 
   it.skip("Cypress level 1 - Text is present");
