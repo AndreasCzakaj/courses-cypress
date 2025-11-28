@@ -1,5 +1,5 @@
 module.exports = {
-   viewportWidth: 1440,
+  viewportWidth: 1440,
   viewportHeight: 660,
   e2e: {
     setupNodeEvents(on, config) {
